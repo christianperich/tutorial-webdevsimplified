@@ -10,7 +10,7 @@
   
   <section class="all">
     <% books.forEach(book => {%>
-      <a href="books/<%= book.id %>">
+      <a href="books/<%= book._id %>">
         <div class="book-card">
           <img src="<%= book.coverImage %>" alt="<%= book.name %>" class="cover">
         </div>

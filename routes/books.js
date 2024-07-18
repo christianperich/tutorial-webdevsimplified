@@ -56,6 +56,7 @@ router.get('/', async (req, res) => {
   {
     $match: searchOptions 
   }])
+
   
   res.render('books/index', { books, searchQuery: req.query })
 })
