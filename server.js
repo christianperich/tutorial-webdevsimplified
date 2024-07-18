@@ -6,6 +6,7 @@ const expressLayouts = require('express-ejs-layouts');
 
 const indexRouter = require('./routes/index')
 const authorsRouter = require('./routes/authors')
+const booksRouter = require('./routes/books')
 
 const PORT = process.env.PORT || 3000
 
@@ -23,5 +24,6 @@ connectDB();
 
 app.use('/', indexRouter);
 app.use('/authors', authorsRouter)
+app.use('/books', booksRouter)
 
 app.listen(PORT, console.log(`http://localhost:${PORT}`))

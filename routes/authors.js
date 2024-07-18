@@ -11,13 +11,17 @@ router.get('/', async (req, res) => {
   }
 
   const authors = await Author.find(searchOptions)
-  res.render('authors/index', { authors, searchQuery: req.query })
+  res.render('authors/index', { authors, searchQuery: req.query || '' })
 })
 
 
 // New Author
 router.get('/new', (req, res) => {
-  res.render('authors/new')
+  const locals = {
+    title: 'Agregar autor'
+  }
+
+  res.render('authors/new', { locals })
 })
 
 

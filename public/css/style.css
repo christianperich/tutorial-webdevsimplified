@@ -1,3 +1,238 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(181, 214, 244);
+}
+
+
+/* general */
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+input, select, textarea {
+  border-radius: 3px;
+  border: none;
+  padding: 3px;
+  margin: 3px;
+  width: 400px;
+}
+
+
+/* NAV BAR */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(37, 33, 33);
+  color: white;
+  padding: 1em 2em 1em 2em;
+  margin-bottom: 3em;
+}
+
+nav ul {
+  display: flex;
+  gap: 5em;
+  list-style: none;
+}
+
+nav .title {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  color: rgb(255, 166, 0);
+}
+
+/* mensaje de error*/
 .error {
+  text-align: center;
   color: red;
+}
+
+/* botones */
+
+.btn {
+  background-color: rgb(68, 164, 237);
+  color: black;
+  display: block;
+  padding: 12px 0px 12px 0px;
+  width: 160px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn:hover {
+  background-color: rgb(116, 186, 240);
+}
+
+.btn-cancel {
+  background-color: rgb(237, 68, 68);
+  color: black;
+  display: block;
+  padding: 12px 0px 12px 0px;
+  width: 160px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-cancel:hover {
+  background-color:rgb(235, 108, 108);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+/* book card */
+.all {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.all-authors {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.book-card {
+  background-color: rgb(71, 83, 94);
+  padding: 1em;
+  border-radius: 10px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  background-color: rgb(147, 170, 190);
+  scale: 1.05;
+}
+
+.cover {
+  width: 300px;
+  object-fit: fill;
+  overflow: hidden;
+}
+
+
+/* New-Book */
+
+.new-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  gap: 1em;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cover-preview {
+  object-fit: cover;
+  width: 85px;
+  height: 125px;
+  border: 2px solid white;
+}
+
+.img-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.cover-file {
+  border: 2px solid #ccc;
+  color: #333;
+  background-color: #fff;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.cover-file:hover {
+  background-color: #eee;
+}
+
+/* Book Details */
+.book-details {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(233, 201, 160);
+  border-radius: 10px;
+}
+
+.book-details .txt {
+  padding: 3em;
+}
+
+.book-details h3 {
+  margin-bottom: 3em;
+}
+
+.book-details img {
+  width: 300px;
+  padding: 1em;
 }
